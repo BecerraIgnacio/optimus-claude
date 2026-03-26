@@ -94,4 +94,6 @@ export async function installUser({ io }) {
   io.write(`Installed Claude agents: ${installedAgents.join(", ")}`);
   io.write("Available slash commands: /optimus-setup, /optimus-status, /optimus-start, /optimus-optimize");
   io.write("Available agent: optimus-guide");
+  io.write("If you installed from inside an active Claude Code session, start a new session before using the new /optimus-* skills or the optimus-guide agent.");
+  io.write("You can use the terminal command `optimus setup --write` immediately.");
 }

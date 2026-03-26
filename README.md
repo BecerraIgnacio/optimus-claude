@@ -52,7 +52,8 @@ For an existing repo:
 /optimus-optimize
 ```
 
-If the slash commands do not appear immediately, start a new Claude Code session.
+If you ran the installer from inside Claude Code, start a new Claude Code session before trying `/optimus-*`.
+The installed personal skills live under `~/.claude/skills/`, and the safe path is to reopen Claude after installation.
 
 ## What Makes It Different
 
