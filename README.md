@@ -32,10 +32,10 @@ Optimus fixes that with a simple model:
 
 ## Quick Start
 
-Install Optimus:
+Copy and paste this:
 
 ```bash
-./install.sh
+git clone https://github.com/BecerraIgnacio/optimus-claude.git && cd optimus-claude && ./install.sh
 ```
 
 Then inside Claude Code:
@@ -147,7 +147,13 @@ optimus setup --write
 
 ## Installation Details
 
-`./install.sh` installs:
+Install command:
+
+```bash
+git clone https://github.com/BecerraIgnacio/optimus-claude.git && cd optimus-claude && ./install.sh
+```
+
+That installs:
 
 - the Optimus runtime at `~/.claude/optimus`
 - personal skills at `~/.claude/skills/optimus-*`
