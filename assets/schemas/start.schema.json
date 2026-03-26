@@ -1,0 +1,186 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "project_title",
+    "project_summary",
+    "audience",
+    "project_type",
+    "primary_outcomes",
+    "success_criteria",
+    "project_sections",
+    "decisions",
+    "research_notes",
+    "root_claude",
+    "rules",
+    "next_steps"
+  ],
+  "properties": {
+    "project_title": {
+      "type": "string"
+    },
+    "project_summary": {
+      "type": "string"
+    },
+    "audience": {
+      "type": "string"
+    },
+    "project_type": {
+      "type": "string"
+    },
+    "primary_outcomes": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {
+        "type": "string"
+      }
+    },
+    "success_criteria": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 5,
+      "items": {
+        "type": "string"
+      }
+    },
+    "project_sections": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["problem", "users", "in_scope", "out_of_scope"],
+      "properties": {
+        "problem": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "string"
+          }
+        },
+        "users": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "string"
+          }
+        },
+        "in_scope": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "string"
+          }
+        },
+        "out_of_scope": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "decisions": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["topic", "decision", "rationale"],
+        "properties": {
+          "topic": { "type": "string" },
+          "decision": { "type": "string" },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "research_notes": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["topic", "takeaway", "action"],
+        "properties": {
+          "topic": { "type": "string" },
+          "takeaway": { "type": "string" },
+          "action": { "type": "string" }
+        }
+      }
+    },
+    "root_claude": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["goal", "instructions", "workflow", "build_test_commands", "safety"],
+      "properties": {
+        "goal": {
+          "type": "string"
+        },
+        "instructions": {
+          "type": "array",
+          "maxItems": 7,
+          "items": {
+            "type": "string"
+          }
+        },
+        "workflow": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "string"
+          }
+        },
+        "build_test_commands": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "command", "status"],
+            "properties": {
+              "label": { "type": "string" },
+              "command": { "type": "string" },
+              "status": { "type": "string" }
+            }
+          }
+        },
+        "safety": {
+          "type": "array",
+          "maxItems": 5,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "rules": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slug", "title", "why", "when_to_use", "instructions"],
+        "properties": {
+          "slug": { "type": "string" },
+          "title": { "type": "string" },
+          "why": { "type": "string" },
+          "when_to_use": { "type": "string" },
+          "instructions": {
+            "type": "array",
+            "maxItems": 6,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "next_steps": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 8,
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

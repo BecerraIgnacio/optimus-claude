@@ -1,0 +1,89 @@
+{
+  "profiles": [
+    {
+      "id": "default",
+      "title": "Default helpers",
+      "description": "Install these once globally so every project starts from the same fast baseline.",
+      "toolIds": ["rtk", "ralph"]
+    },
+    {
+      "id": "workflow",
+      "title": "Workflow packs",
+      "description": "Optional workflow systems you may want later, but not by default.",
+      "toolIds": ["get-shit-done", "superpowers"]
+    },
+    {
+      "id": "extras",
+      "title": "Opt-in extras",
+      "description": "Useful additions for specific workflows or project types.",
+      "toolIds": ["claude-mem", "ui-ux-pro-max-skill", "everything-claude-code"]
+    }
+  ],
+  "tools": [
+    {
+      "id": "rtk",
+      "title": "RTK",
+      "summary": "Token-saving shell workflow helper for Claude Code.",
+      "homepage": "https://github.com/rtk-ai/rtk",
+      "command": "rtk",
+      "checkArgs": [["--version"], ["--help"]],
+      "installStrategy": "rtk-shell-installer",
+      "setupNote": "Optimus installs the RTK binary and then runs `rtk init -g --auto-patch`."
+    },
+    {
+      "id": "ralph",
+      "title": "Ralph",
+      "summary": "Global Claude Code execution toolkit and command layer.",
+      "homepage": "https://github.com/frankbria/ralph-claude-code",
+      "command": "ralph",
+      "checkArgs": [["--help"], ["--version"]],
+      "installStrategy": "ralph-clone-installer",
+      "setupNote": "Optimus clones Ralph to a temp directory, runs `./install.sh`, and removes the temp clone."
+    },
+    {
+      "id": "get-shit-done",
+      "title": "Get Shit Done",
+      "summary": "Spec-driven workflow pack for later manual install.",
+      "homepage": "https://github.com/gsd-build/get-shit-done",
+      "command": "gsd",
+      "checkArgs": [["--help"]],
+      "installStrategy": "manual"
+    },
+    {
+      "id": "superpowers",
+      "title": "Superpowers",
+      "summary": "Skill-oriented workflow pack for later manual install.",
+      "homepage": "https://github.com/obra/superpowers",
+      "command": "superpowers",
+      "checkArgs": [["--help"]],
+      "installStrategy": "manual"
+    },
+    {
+      "id": "claude-mem",
+      "title": "Claude Mem",
+      "summary": "Persistent memory layer for heavier workflows.",
+      "homepage": "https://github.com/thedotmack/claude-mem",
+      "command": "claude-mem",
+      "checkArgs": [["--help"]],
+      "installStrategy": "manual"
+    },
+    {
+      "id": "ui-ux-pro-max-skill",
+      "title": "UI UX Pro Max",
+      "summary": "UI-heavy design skill pack for frontend projects.",
+      "homepage": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "command": "ui-ux-pro-max-skill",
+      "checkArgs": [["--help"]],
+      "installStrategy": "manual"
+    },
+    {
+      "id": "everything-claude-code",
+      "title": "Everything Claude Code",
+      "summary": "Reference collection for later manual adoption.",
+      "homepage": "https://github.com/affaan-m/everything-claude-code",
+      "command": "everything-claude-code",
+      "checkArgs": [["--help"]],
+      "installStrategy": "manual"
+    }
+  ]
+}

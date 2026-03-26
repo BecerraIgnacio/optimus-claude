@@ -1,0 +1,113 @@
+[
+  {
+    "id": "anthropic-memory",
+    "title": "Anthropic Memory Docs",
+    "kind": "official",
+    "url": "https://code.claude.com/docs/en/memory",
+    "tags": ["memory", "token-hygiene", "planning"],
+    "usage": "Root context design, scoped rules, and low-token CLAUDE.md structure",
+    "promptSummary": "Keep root CLAUDE.md concise, prefer scoped rules for subtrees, and avoid contradictory always-on instructions.",
+    "priority": 95
+  },
+  {
+    "id": "anthropic-settings",
+    "title": "Anthropic Settings Docs",
+    "kind": "official",
+    "url": "https://code.claude.com/docs/en/settings",
+    "tags": ["security", "setup", "token-hygiene", "existing-codebase"],
+    "usage": "Shared project settings, permission defaults, and deny rules for sensitive files",
+    "promptSummary": "Use project settings for permissions and shared behavior; deny sensitive files instead of relying on broad ignore patterns.",
+    "priority": 90
+  },
+  {
+    "id": "anthropic-subagents",
+    "title": "Anthropic Subagents Docs",
+    "kind": "official",
+    "url": "https://code.claude.com/docs/en/sub-agents",
+    "tags": ["planning", "agents", "workflow"],
+    "usage": "Context isolation and parallel research guidance without moving the whole workflow into a permanent agent",
+    "promptSummary": "Use subagents for isolated research and focused tasks; keep the main context small and reuse specialized prompts only when needed.",
+    "priority": 82
+  },
+  {
+    "id": "get-shit-done",
+    "title": "Get Shit Done",
+    "kind": "workflow",
+    "url": "https://github.com/gsd-build/get-shit-done",
+    "tags": ["planning", "workflow", "spec"],
+    "usage": "Lean spec-driven planning, phased execution, and fresh-context task slicing",
+    "promptSummary": "Spec first, discuss before planning, keep plans atomic, and avoid giant accumulated contexts by using fresh windows for execution.",
+    "priority": 80
+  },
+  {
+    "id": "superpowers",
+    "title": "Superpowers",
+    "kind": "workflow",
+    "url": "https://github.com/obra/superpowers",
+    "tags": ["planning", "workflow", "skills"],
+    "usage": "Triggerable skills and planning discipline instead of always-on giant prompts",
+    "promptSummary": "Use compact reusable skills for planning, review, debugging, and execution instead of one broad omniprompt.",
+    "priority": 76
+  },
+  {
+    "id": "everything-claude-code",
+    "title": "Everything Claude Code",
+    "kind": "workflow",
+    "url": "https://github.com/affaan-m/everything-claude-code",
+    "tags": ["token-hygiene", "planning", "security", "workflow"],
+    "usage": "Token optimization, harness settings, and context hygiene patterns",
+    "promptSummary": "Keep sessions cost-aware, trim root context, and route heavier workflows through scoped commands and runtime controls.",
+    "priority": 74
+  },
+  {
+    "id": "rtk",
+    "title": "RTK",
+    "kind": "workflow",
+    "url": "https://github.com/rtk-ai/rtk",
+    "tags": ["token-hygiene", "performance"],
+    "usage": "Command-level token reduction for routine development actions",
+    "promptSummary": "Reduce wasted tokens on repetitive shell workflows; treat it as an optimization layer, not a planning system.",
+    "priority": 68
+  },
+  {
+    "id": "claude-mem",
+    "title": "Claude Mem",
+    "kind": "workflow",
+    "url": "https://github.com/thedotmack/claude-mem",
+    "tags": ["memory", "token-hygiene"],
+    "usage": "Persistent memory retrieval patterns for later workflow expansion",
+    "promptSummary": "Memory systems should retrieve compact indices first and fetch details only when necessary.",
+    "priority": 50
+  },
+  {
+    "id": "ui-ux-pro-max-skill",
+    "title": "UI UX Pro Max",
+    "kind": "domain",
+    "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "tags": ["frontend", "ui", "design"],
+    "usage": "UI-heavy project bootstrap with stronger design-system defaults and anti-pattern guidance",
+    "promptSummary": "Pick explicit visual direction, define anti-patterns early, and avoid generic default UI choices.",
+    "priority": 84
+  },
+  {
+    "id": "awesome-claude-code",
+    "title": "Awesome Claude Code",
+    "kind": "workflow",
+    "url": "https://github.com/hesreallyhim/awesome-claude-code",
+    "tags": ["discovery", "workflow"],
+    "usage": "Discovery and follow-up research once the initial bootstrap is stable",
+    "promptSummary": "Treat it as a catalog of patterns and tooling options, not a default prompt payload.",
+    "priority": 42
+  },
+  {
+    "id": "ralph",
+    "title": "Ralph For Claude Code",
+    "kind": "workflow",
+    "url": "https://github.com/frankbria/ralph-claude-code",
+    "tags": ["autonomy", "workflow"],
+    "usage": "Post-spec execution automation only after the bootstrap package is approved",
+    "promptSummary": "Autonomous loops belong after the spec and safety gates are in place, not in the first bootstrap step.",
+    "priority": 35,
+    "deferred": true
+  }
+]

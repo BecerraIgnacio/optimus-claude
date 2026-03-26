@@ -1,0 +1,17 @@
+{
+  "name": "optimus-claude",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal Claude Code bootstrap CLI for lean project startup packages",
+  "type": "module",
+  "bin": {
+    "optimus": "./bin/optimus.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "install:user": "node ./bin/optimus.mjs install-user"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}
