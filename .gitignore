@@ -1,1 +1,20 @@
 node_modules/
+
+# Claude / ClaudeOS — never publish
+CLAUDE.md
+.claude/
+.claudeignore
+attachments/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Env
+.env
+.env.*
+!.env.example
